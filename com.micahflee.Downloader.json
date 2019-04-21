@@ -1,0 +1,23 @@
+{
+    "app-id": "com.micahflee.Downloader",
+    "runtime": "org.kde.Platform",
+    "runtime-version": "5.12",
+    "sdk": "org.kde.Sdk",
+    "command": "downloader",
+    "modules": [
+        {
+            "name": "downloader",
+            "buildsystem": "simple",
+            "build-commands": [
+                "python3 setup.py install --prefix=/app",
+                "install -D share/logo.png /app/share/downloader/logo.png"
+            ],
+            "sources": [
+              {
+                "type": "dir",
+                "path": "."
+              }
+            ]
+        }
+    ]
+}
